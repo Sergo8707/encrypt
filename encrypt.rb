@@ -5,6 +5,7 @@ word = gets.to_s
 puts "Каким способом зашифровать :"
 puts "1. MD5"
 puts "2. SHA1"
+puts "3. SHA2"
 encode = gets.to_i
 if encode == 1
   puts "Вот что получилось:"
@@ -12,6 +13,9 @@ if encode == 1
 elsif encode == 2
   puts "Вот что получилось:"
   puts Digest::SHA1.hexdigest word
+elsif encode == 3
+  puts "Вот что получилось:"
+  puts Digest::SHA2.hexdigest word
 else
   puts "Вы не выбрали вариант шифровки"
 end
